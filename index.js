@@ -1,4 +1,4 @@
-define(['./lib/compare.js', './lib/canonizer.js', './lib/revxpath.js', './lib/reporters/groupingReporter.js'],
+define(['./lib/compare', './lib/canonizer', './lib/revxpath', './lib/reporters/groupingReporter'],
   function(compare, canonizer, revxpath, groupingReporter){
 
    return {
