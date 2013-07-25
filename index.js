@@ -1,14 +1,11 @@
-(function(){
+define(['./lib/compare.js', './lib/canonizer.js', './lib/revxpath.js', './lib/reporters/groupingReporter.js'],
+  function(compare, canonizer, revxpath, groupingReporter){
 
-   "use strict";
-
-   var libPrefix = process.env.COVER ? './lib-cov' : './lib';
-
-   module.exports = {
-      compare: require(libPrefix + '/compare'),
-      XMLSerializer: require(libPrefix + '/canonizer'),
-      revXPath: require(libPrefix + '/revxpath'),
-      GroupingReporter: require(libPrefix + '/reporters/groupingReporter.js')
+   return {
+      compare: compare,
+      XMLSerializer: canonizer,
+      revXPath: revxpath,
+      GroupingReporter: groupingReporter
    };
 
-})();
+});
